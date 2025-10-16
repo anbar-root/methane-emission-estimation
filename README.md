@@ -26,7 +26,7 @@ The study was conducted as part of a master's thesis at the National Technical U
 ## 🧩 Repository Structure
 ```text
 methane-emission-estimation/
-├─ code/                 # Python scripts for preprocessing, modeling, and visualization
+├─ src/notebooks                 # Python scripts for preprocessing, modeling, and visualization
 ├─ data_samples/         # Example input datasets (small-sized for demonstration)
 ├─ docs/                 # Diagrams, result plots, and explanations
 ├─ requirements.txt      # Python dependencies
