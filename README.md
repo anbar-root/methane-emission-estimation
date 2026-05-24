@@ -23,6 +23,30 @@ The study was conducted as part of a master's thesis at the National Technical U
 
 ---
 
+## 📐 Data Pipeline & Architecture
+
+The project leverages the **Integrated Methane Inversion (IMI)** platform deployed on AWS to process high-resolution satellite data.
+
+```text
+[ S5P TROPOMI Satellite Data ] (Resident on AWS Cloud)
+               │
+               ▼
+   [ AWS EC2 Instance (IMI AMI) ] ◄── Configured & Managed by me
+               │
+               ├─► Generates ~1.6 TB of intermediate outputs
+               │
+               ▼
+        [ AWS S3 Bucket ] (Data Storage)
+               │
+               ▼
+[ Custom Python Pipeline (My Code) ] 
+ ├─ Libraries: Xarray, Pandas, Geopandas, Matplotlib
+ ├─ Steps: Data retrieval, regional aggregation, filtering, and normalization
+ └─ Output: Temporal/spatial emission analysis & visualizations
+```
+
+---
+
 ## 🧩 Repository Structure
 ```text
 methane-emission-estimation/
